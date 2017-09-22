@@ -1,8 +1,10 @@
-\def\VCDate{2017/09/22}\def\VCVersion{90a3068}
+\def\VCDate{2017/09/22}\def\VCVersion{f495964}
 \documentclass{ffslides}
 \ffpage{25}{\numexpr 16/9}
 \usepackage{ProofPower,fancyvrb}
 \begin{document}
+\obeyspaces
+%
 \normalpage{Bit Mask Lab}{
 This lab explores an application of using bit masks to place
 a graphic image transparently on another image.
@@ -38,7 +40,23 @@ ASM code to create bit mask of tree.ppm
 \+\\
 \end{GFT}
 }
-\putfig{.1}{.5}{.2}{tree}
+\btext{.55}{.05}{.4}{\VerbatimInput{lab2b.c}}
+\putfig{.1}{.4}{.2}{tree}
+\putfig{.32}{.4}{.2}{treemask}
+%
+\normalpage{Build script}{
+\begin{GFT}{Text written to file build.sh}
+\+doctex lab\\
+\+pptexenv latex lab\\
+\+dvipdf lab\\
+\end{GFT}
+\begin{GFT}{Bourne Shell}
+\+chmod +x build.sh\\
+\end{GFT}
+\begin{GFT}{SML}
+\+\\
+\end{GFT}
+}
 %
 \end{document}
 

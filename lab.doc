@@ -3,6 +3,8 @@
 \ffpage{25}{\numexpr 16/9}
 \usepackage{ProofPower,fancyvrb}
 \begin{document}
+\obeyspaces
+%
 \normalpage{Bit Mask Lab}{
 This lab explores an application of using bit masks to place
 a graphic image transparently on another image.
@@ -38,8 +40,20 @@ ASM code to create bit mask of tree.ppm
 
 =TEX
 }
-\btext{.5}{.1}{.4}{\VerbatimInput{lab2b.c}}
+\btext{.55}{.05}{.4}{\VerbatimInput{lab2b.c}}
 \putfig{.1}{.4}{.2}{tree}
-\putfig{.1}{.8}{.2}{treemask}
+\putfig{.32}{.4}{.2}{treemask}
+%
+\normalpage{Build script}{
+=DUMP build.sh
+doctex lab
+pptexenv latex lab
+dvipdf lab
+=SH
+chmod +x build.sh
+=SML
+
+=TEX
+}
 %
 \end{document}
