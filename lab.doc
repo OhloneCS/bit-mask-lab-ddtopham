@@ -38,6 +38,8 @@ ASM code to create bit mask of tree.ppm
 
 =TEX
 }
-\putfig{.1}{.5}{.2}{tree}
+\btext{.5}{.1}{.4}{\VerbatimInput{lab2b.c}}
+\putfig{.1}{.4}{.2}{tree}
+\putfig{.1}{.8}{.2}{treemask}
 %
 \end{document}
