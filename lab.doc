@@ -3,18 +3,39 @@
 \ffpage{25}{\numexpr 16/9}
 \usepackage{ProofPower,fancyvrb}
 \begin{document}
+\normalpage{Bit Mask Lab}{
+This lab explores an application of using bit masks to place
+a graphic image transparently on another image.
+
+First we will create a background.ppm image (in C and then in asm).
+Second we will create a bitmask of the tree.ppm image. 
+
+The tree.ppm image is surrounded and interspersed
+with white pixels, and we want to 
+``remove'' those from background.ppm image it is being overlayed onto so that any 
+colors of the background will be visible instead of those white pixels.
+
+Since white is represented as rgb of 0xff 0xff 0xff, then we can
+create a bit mask by removing all colors except 0xff's. We will be left 
+with a black \& white image where the original colors will be  
+black. Then using this mask we can use the AND instruction to remove
+those pixels from the background. (Later, in part 2 of lab we will OR
+the original image into that modified background)
+}
 %
 \normalpage{Create Portable Pixel Map Background}{
-=DUMP lab2a.c
-// C code to create background.ppm
+ASM code to create background.ppm
+=DUMP lab2a.s
+
 =TEX
 }
 \btext{.5}{.1}{.4}{\VerbatimInput{lab2a.c}}
 \putfig{.1}{.5}{.2}{background}
 %
 \normalpage{Create Bit Mask of Tree Image}{
-=DUMP lab2b.c
-// C code to create bit mask of tree.ppm
+ASM code to create bit mask of tree.ppm
+=DUMP lab2b.s
+
 =TEX
 }
 \putfig{.1}{.5}{.2}{tree}
