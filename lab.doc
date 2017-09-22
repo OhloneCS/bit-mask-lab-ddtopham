@@ -1,7 +1,7 @@
 =TEX
 \documentclass{ffslides}
 \ffpage{25}{\numexpr 16/9}
-\usepackage{ProofPower}
+\usepackage{ProofPower,fancyvrb}
 \begin{document}
 %
 \normalpage{Create Portable Pixel Map Background}{
@@ -9,14 +9,14 @@
 // C code to create background.ppm
 =TEX
 }
-\btext{.5}{.1}{.5}{\VerbatimInput{lab2a.c}}
-\putfig{.5}{.5}{.3}{background}
+\btext{.5}{.1}{.4}{\VerbatimInput{lab2a.c}}
+\putfig{.1}{.5}{.2}{background}
 %
 \normalpage{Create Bit Mask of Tree Image}{
 =DUMP lab2b.c
 // C code to create bit mask of tree.ppm
 =TEX
 }
-\putfig{.5}{.5}{.3}{tree}
+\putfig{.1}{.5}{.2}{tree}
 %
 \end{document}
